@@ -16,7 +16,8 @@ service GreetingService {
 	rpc HelloServerStream (HelloRequest) returns (stream HelloResponse);
 		// クライアントストリーミング
 	rpc HelloClientStream (stream HelloRequest) returns (HelloResponse);
-
+		// 双方向ストリーミング
+	rpc HelloBiStreams (stream HelloRequest) returns (stream HelloResponse);
 }
 
 // 型の定義
